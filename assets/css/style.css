@@ -1,0 +1,798 @@
+@import url('https://fonts.cdnfonts.com/css/lexend-deca?styles=170421');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Lexend Deca";
+    -webkit-font-smoothing: antialiased;
+    color: #444444;
+    display: flex;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+}
+
+li{
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* main start */
+main {
+    padding:10px;
+    width: 100%;
+}
+
+main .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+main .content .menu{
+    width: 25%;
+    padding: 15px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .menu .menu-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .content .menu .menu-head p{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+}
+
+main .content .menu form{
+    width: 100%;
+    padding: 10px 0;
+ }
+
+ main .content .menu form .input{
+    width: 100%;
+    position: relative;
+ }
+
+ main .content .menu form .input input{
+    width: 100%;
+    font-size: 16px;
+    outline: 0;
+    padding: 5px 0 5px 45px;
+    background-color: rgba(250, 250, 250, 0);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+ }
+
+ main .content .menu form .input i{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: rgb(124, 124, 124);
+ }
+
+ main .content .menu .menu-title{
+    font-size: 12px;
+    padding: 10px 0 ;
+ }
+
+ main .content .menu .tasks{
+   display: flex;
+   flex-direction: column;
+   padding-left: 5px;
+ }
+
+ main .content .menu .tasks a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    padding:5px 5px;
+    border-radius: 5px;
+    transition: all 0.4s ;
+  }
+
+  main .content .menu .tasks a:hover{
+    font-weight: bold;
+    background-color: #EBEBEB;
+  }
+
+  main .content .menu .tasks .active{
+    font-weight: bold;
+    background-color: #EBEBEB;
+  }
+
+
+
+  main .content .menu .tasks a i{
+    color: rgb(124, 124, 124);
+  }
+
+  main .content .menu .tasks .count{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 30px;
+    justify-content: center;
+    background-color: #EBEBEB;
+    transition: all 0.4s ;
+  }
+
+  main .content .menu .tasks a:hover .count{
+    background-color: #fff;
+  }
+
+  main .content .menu .tasks .active .count{
+    background-color: #fff;
+  }
+
+hr{
+    color: #EBEBEB;
+    margin: 5px 0;
+    opacity: 0.2;
+}
+
+main .content .menu .tasks .pink{
+    width: 15px;
+    height: 15px;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+}
+
+main .content .menu .tasks .blue{
+    width: 15px;
+    height: 15px;
+    background-color: #44a3ff;
+    border-radius: 5px;
+}
+
+main .content .menu .tasks .yellow{
+    width: 15px;
+    height: 15px;
+    background-color: #ffd43b;
+    border-radius: 5px;
+}
+
+main .content .menu .tags{
+    display: flex;
+    justify-content: flex-start;
+}
+
+  main .content .menu .tags a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 6px;
+}
+
+main .content .menu .tags .tags-1{
+    background-color: #d1eaed;
+}
+
+main .content .menu .tags .tags-2{
+    background-color: #ffdada;
+}
+
+main .content .menu .tags .add-tags{
+    background-color: #ebebeb;
+}
+
+main .content .menu .menu-bottom{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-top:auto ;
+}
+
+main .content .menu .menu-bottom a{
+    padding: 10px 0;
+}
+
+main .content .menu .menu-bottom a i{
+    padding-right: 15px;
+}
+
+/* TODAY başlangıcı */
+main .content .today{
+    width: 45%;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+main .content .today .today-top{
+    display: flex;
+    font-size: 35px;
+    color: #212529ff;
+    font-weight: bold;
+}
+
+main .content .today .today-top span{
+    padding: 0 15px;
+    border-radius: 7px;
+    border: 1px solid rgb(235, 235, 235);
+    margin-left: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+main .content .today form{
+    width: 100%;
+    padding: 10px 0;
+    color: #7c7c7cff
+ }
+
+ main .content .today form .input{
+    width: 100%;
+    position: relative;
+ }
+
+ main .content .today form .input input{
+    width: 100%;
+    font-size: 16px;
+    outline: 0;
+    padding: 5px 0 5px 45px;
+    background-color: rgba(250, 250, 250, 0);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+ }
+
+ main .content .today form .input i{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+ }
+
+ main .content .today .today-list{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: 16px;
+ }
+
+ main .content .today .today-list a{
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 7px;
+ }
+
+ main .content .today .today-list .today-list-bottom{
+  border:none !important;
+ }
+
+main .content .today .today-list .counts{
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid rgb(235, 235, 235);
+    margin-right: 15px;
+}
+
+main .content .today .today-list a i{
+    display: flex;
+    margin-left: auto;
+ }
+
+ main .content .today .today-list .details{
+    display: flex;
+    flex-direction: column;
+ }
+
+ main .content .today .today-list .details .top{
+    display: flex;
+ }
+
+ main .content .today .today-list .details .bottom{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    padding: 10px 30px;
+    color: #444444;
+    font-size: 12px;
+    gap: 10px;
+ }
+
+ main .content .today .today-list .details .bottom  i{
+    padding-top: -5px;
+ }
+
+ main .content .today .today-list .details .bottom .border{
+    border-right: 1px solid #EBEBEB;
+    border-left: 1px solid #EBEBEB;
+    padding: 0 15px;
+    gap: 10px;
+    display: flex;
+  }
+
+ main .content .today .today-list .details .bottom .count-1{
+    background-color: #EBEBEB;
+    width: 25px;
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+ }
+
+ main .content .today .today-list .details .bottom .pink{
+    width: 15px;
+    height: 15px;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+ }
+
+ main .content .today .today-list .details .bottom .border-1{
+    border-right: 1px solid #EBEBEB;
+    padding: 0 20px;
+    gap: 10px;
+   display: flex;
+   align-items: center;
+  }
+
+  main .content .today .today-list .details .bottom .border-1 .list{
+    width: 15px;
+    height: 15px;
+    background-color: #ffd43b;
+    border-radius: 5px;
+    display: flex;
+  }
+
+
+
+/* TODAY bitiş */
+
+/* TASK start */
+main .content .task{
+    width: 30%;
+    padding: 15px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .task .task-head{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    align-items: center;
+}
+
+main .content .task .task-head i{
+    font-size: 18px;
+    color: #7C7C7C;
+}
+
+main .content .task form{
+    width: 100%;
+    padding: 10px 0;
+ }
+
+main .content .task form .form-top{
+    width: 100%;
+    padding: 10px 0;
+ }
+
+
+ main .content .task form input[type=text],
+ main .content .task form textarea
+ {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    outline: 0;
+    padding: 5px 15px;
+    background-color: rgba(250, 250, 250, 0);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+ }
+
+ main .content .task form textarea
+ {
+    height: 150px;
+    resize: none;
+ }
+
+ main .content .task form label{
+    display: flex;
+    flex-direction: column;
+ }
+
+ main .content .task form select{
+    padding: 3px;
+    border: 1px solid #f4f4f4; 
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+    margin: 10px 0 10px 62px;
+    width: 30%;
+    color: #444;
+    background-color: rgb(244, 244, 244);
+ }
+
+ main .content .task form input[type=date]{
+    padding: 3px;
+    margin-left: 20px;
+    border: 1px solid #f4f4f4; 
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+    margin-bottom: 10px;
+    width: 30%;
+    color: #444;
+    background-color: rgb(244, 244, 244);
+ }
+
+
+ main .content .task .tags{
+    display: flex;
+    font-size: 14px;
+ }
+
+ main .content .task .tags span{
+   margin-right: 65px;
+ }
+
+ main .content .task .tags a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 0px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    height: 29px;
+ }
+
+ main .content .task .tags .tag-1{
+    background-color: #d1eaed;
+ }
+
+ main .content .task .tags .add-tag{
+    background-color: #ebebeb;
+ }
+
+ main .content .task .subtasks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+ }
+
+ main .content .task .subtasks .subtasks-top{
+    font-size: 24px;
+ }
+
+ 
+main .content .task form{
+    width: 100%;
+    padding: 10px 0;
+    color: #7c7c7cff
+ }
+
+ main .content .task form .input{
+    width: 100%;
+    position: relative;
+ }
+
+ main .content .task form .input input{
+    width: 100%;
+    font-size: 16px;
+    outline: 0;
+    padding: 5px 0 5px 45px;
+    background-color: rgba(250, 250, 250, 0);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+ }
+
+ main .content .task form .input i{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+ }
+
+ main .content .task .subtasks .subtasks-bottom{
+    font-size: 16px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+ }
+
+ main .content .task .subtasks .subtasks-bottom .count{
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid rgb(235, 235, 235);
+    margin: 0 10px;
+ }
+
+ main .content .task .task-bottom{
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+ }
+
+ main .content .task .task-bottom button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 6px;
+    height: 30px;
+ }
+
+ main .content .task .task-bottom .left{
+    border:1px solid  rgb(235, 235, 235);
+    margin-right: 25px;
+    color: rgb(68, 68, 68);
+    background-color: rgb(244, 244, 244);
+ }
+
+ main .content .task .task-bottom .right{
+    background-color: #ffd43b;
+    border: none;
+    color: rgb(33, 37, 41);
+ }
+/* TASK end */
+
+/* main end */
+
+/* responsive start */
+@media(max-width:1200px) {
+    .content {
+        padding: 0 10px !important;
+    }
+
+    main .content .menu{
+        padding: 20px 15px !important;
+    }
+
+    main .content .menu .tags  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    }
+
+    main .content .today .today-list{
+        font-size: 14px;
+    }
+
+    main .content .task{
+        padding: 20px 20px;
+        font-size: 10px;
+    }
+
+    main .content .task form input[type=date] {
+        margin-left: 35px;
+    }
+
+    main .content .task .tags {
+        font-size: 10px;
+    }
+
+    main .content .task .subtasks .subtasks-top {
+        font-size: 20px;
+    }
+    
+    main .content .task .task-bottom{
+        font-size: 12px;
+    }
+    main .content .task .task-bottom .left {
+        margin-right: 15px;
+        padding:20px 10px ;
+    }
+
+    main .content .task .task-bottom .ri4 {
+        padding:20px 10px ;
+    }
+
+}
+
+@media(max-width:1000px){
+    main .content .menu{
+        width: 35%;
+        padding: 15px 20px!important;
+    }
+    main .content .today{
+       width: 65%;
+    }
+
+    main .content .task{
+        display: none;
+    }
+
+    main .content .today .today-list{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:768px){
+    main .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .content .menu{
+        width: 100%;
+        padding: 15px 20px!important;
+    }
+
+    main .content .menu .menu-bottom{
+       margin-top: 50px;
+    }
+
+    main .content .today{
+       width: 100%;
+    }
+
+    main .content .task{
+        display: inline;
+        width: 100%;
+    }
+
+    main .content .task .tags {
+        font-size: 12px !important;
+    }
+
+    main .content .task .subtasks .subtasks-top {
+        font-size: 20px !important;
+    }
+    
+    main .content .task .task-bottom{
+        font-size: 17px;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+    main .content .task .task-bottom .left {
+        margin-right: 30px;
+        padding:25px 40px !important;
+    }
+
+    main .content .task .task-bottom .right {
+        padding:25px 40px ;
+    }
+
+}
+
+@media(max-width:530px){
+    main{
+        padding: 0;
+        margin: 0;
+    }
+
+    main .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .content .menu{
+        width: 100%;
+        padding: 15px 10px!important;
+    }
+
+    main .content .menu .menu-bottom{
+        margin-top: 30px;
+     }
+
+    main .content .today{
+       width: 100%;
+    }
+
+    main .content .task{
+        display: inline;
+        width: 100%;
+    }
+
+    main .content .today .today-top{
+        font-size: 30px;
+    }
+
+    main .content .today .today-list{
+        font-size: 12px;
+    }
+
+    main .content .today .today-list .details .bottom{
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    main .content .today .today-list .details .bottom .border{
+        padding: 2px;
+    }
+
+    main .content .task .task-bottom{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .content .task .task-bottom .left {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-left: 30px;
+    }
+
+    main .content .task .task-bottom .right {
+        width: 100%;
+       
+    }
+}
+/* responsive end */
+
+
